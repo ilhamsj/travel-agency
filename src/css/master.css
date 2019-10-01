@@ -1,3 +1,45 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background: #f5f7fb
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
+.my-text-primary {
+    color: #ffa200 !important;
+}
+
+.my-h-100 {
+    min-height: 100vh;
+}
+.my-h-50 {
+    min-height: 50vh;
+}
+.my-h-25 {
+    min-height: 25vh;
+}
+
+#banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-golden {
+    background-color: #fbaf08;
+    /* opacity: 0.8; */
+}
+
+.bg-clear {
+    background-color: white
+}
+
+h5 {
+    line-height: 10vh
+}
