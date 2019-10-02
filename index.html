@@ -39,7 +39,7 @@
         </div>
     </nav>
 
-    <div id="banner">
+    <div id="banner" class="bg-image bg-image-girl">
         <div class="container">
             <div class="row my-h-100 align-items-center justify-content-center text-center">
                  <div class="col">
@@ -62,7 +62,7 @@
 
     <div>
         <div class="container">
-            <div class="row my-h-50 align-items-center justify-content-center">
+            <div id="top-deals" class="row my-h-50 align-items-center justify-content-center">
                  <div class="col-12 col-sm-10  text-center">
                      <div class="card bg-transparent border-0">
                          <div class="card-body">
@@ -79,23 +79,48 @@
                          </div>
                      </div>
                  </div>
+                 <div class="top-deal col-12 col-sm-4 mb-3 ">
+                    <div class="card border-0">
+                        <img class="card-img-top img-fluid" src="src/images/service1.png" alt="" srcset="">
+                        <div class="card-img-overlay p-0 d-flex align-items-start flex-row-reverse">
+                            <div class="card-body bg-golden op-lg col-3 pr-0 pb-2">
+                                <h4 class="text-light">
+                                    <span class="discount">25</span>% OFF
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-0 bg-transparent">
+                        <div class="card-body px-0">
+                            <h4 class="title">LOREM IPSUM DOLOR SIT</h4>
+                            consectetur adipisicing elit. Animi quo dolores dolorum aspernatur
+                        </div>
+                        <div class="card-body row align-items-center px-0">
+                            <div class="col">
+                                Start From <br>
+                                <strong class="my-text-primary">$<span class="price">199</span></strong>
+                            </div>
+                            <div class="col text-right">
+                                <a href="" class="btn bg-golden  text-clear">
+                                    <strong>Book Now</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div>
+    <div class="bg-image bg-image-destination">
         <div class="container">
             <div class="row my-h-50 align-items-center justify-content-center text-center">
-                 <div class="col-12 col-sm-10">
-                     <div class="card bg-transparent border-0">
+                 <div class="col p-4">
+                     <div class="card border-0" style="opacity: 0.9;">
                          <div class="card-body">
-                            <h2 class="" style="font-weight: 900; font-size: 38px; line-height: 70px">
-                                OUR
-                                <span class="my-text-primary">DESTINATIONS</span>
-                            </h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et minus ullam recusandae velit deserunt non necessitatibus natus, magni nam quisquam eum provident
-                            </p>
+                             <p class="lead">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat laboriosam pariatur distinctio aliquid. Ipsa ullam fugit, repellendus impedit nisi eum porro? Ipsa a dolor facilis tempore aspernatur molestiae assumenda autem.
+                             </p>
                          </div>
                      </div>
                  </div>
@@ -133,13 +158,17 @@
         </div>
     </div>
 
-    <div class="bg-transparent">
-        <div class="container">
-            <div class="row my-h-50 align-items-center justify-content-center">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <img class="img-fluid" src="src/images/icon-box.png" alt="" srcset="">
+    <div class="bg-image bg-image-footer">
+        <div class="container p-4">
+            <div id="services" class="row my-h-50 align-items-center justify-content-center text-center">
+                <div class="service col-12 col-sm mb-3 ">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm">
+                            <img class="img-fluid mb-4" src="src/images/icon-map.png" alt="" srcset="">
+                            <h3 class="my-text-primary">
+                                140
+                            </h3> 
+                            <span class="text-light display-7">DESTINATIONS</span>
                         </div>
                     </div>
                 </div>
@@ -192,7 +221,12 @@
             </div>
         </div>
     </div>
+
+    <div class="position-fixed" style="bottom:0; right:0">
+        <a href="" class="btn bg-golden rounded-0">Whatsapp</a>
+    </div>
           
+    
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

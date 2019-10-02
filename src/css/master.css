@@ -1,9 +1,15 @@
+/* Reset Bootstrap */
+.navbar-dark .navbar-toggler {
+    border: 0;
+}
+
+/* Custom css */
 * {
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #f5f7fb
+    background: white
 }
 
 h1, h2, h3, h4, h5 {
@@ -13,6 +19,15 @@ h1, h2, h3, h4, h5 {
 h2 {
     font-size: 38px; 
     line-height: 70px
+}
+
+h5 {
+    line-height: 10vh
+}
+
+.display-7 {
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .my-text-primary {
@@ -29,14 +44,6 @@ h2 {
     min-height: 25vh;
 }
 
-#banner {
-    background-image: url(../images/banner.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
 .bg-golden {
     background-color: #FFA200;
 }
@@ -49,24 +56,46 @@ h2 {
     color: white
 }
 
-h5 {
-    line-height: 10vh
-}
-
-/* Reset Bootstrap */
-.navbar-dark .navbar-toggler {
-    border: 0;
-}
-
 .op {
     opacity: 0.3;
 }
+
 .op-sm {
     opacity: 0.5;
 }
+
 .op-md {
     opacity: 0.7;
 }
+
 .op-lg {
     opacity: 0.9;
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-image-girl {
+    background-image: url(../images/banner.png);
+}
+.bg-image-footer {
+    background-image: url(../images/footerbg.png);
+}
+.bg-image-destination {
+    background-image: url(../images/items-to-discover-things.jpg);
+}
+
+.bg-cover {
+    background-image: linear-gradient(225deg,#0abac2,#b2de94);
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1076px;
+    }
 }
