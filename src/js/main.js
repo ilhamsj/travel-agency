@@ -1,3 +1,4 @@
+// require('bootstrap');
 
 $(document).ready(function () {
     $(window).scroll(function () { 
@@ -111,6 +112,21 @@ $(document).ready(function () {
         $(x).find('.price').html(item.price);
         $(x).find('.discount').html(item.discount);
         $(x).find('.title').html(item.name);
-        $(x).appendTo('#top-deals');
+        $(x).appendTo('#top-deals').hover(function () {
+            $(this).find('.info-discount').slideToggle();
+            $(this).find('.info').slideToggle();
+        }, function () {
+            $(this).find('.info-discount').slideToggle();
+            $(this).find('.info').slideToggle(); 
+        });
     });
 });
+
+    $('.top-deal').hover(function () {
+        $(this).find('.info-discount').slideToggle();
+        $(this).find('.info').slideToggle();
+    }, function () {
+        $(this).find('.info-discount').slideToggle();
+        $(this).find('.info').slideToggle();
+        }
+    );

@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="src/css/poppins-700.css">
     <link rel="stylesheet" href="src/css/poppins.css">
     <link rel="stylesheet" href="src/css/master.css">
+    <style>
+        .whatsapp {
+            transform: rotate(-90deg);
+            bottom:50vh;
+            right: -38px;
+        }
+    </style>
   </head>
   <body>
 
@@ -48,9 +55,10 @@
                                 <span class="my-text-primary">DISCOVER</span>
                                 SHARE
                             </h1>
-                            <p class="lead text-light">
+                            <p class="lead text-light my-4">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et minus ullam recusandae velit deserunt non necessitatibus natus, magni nam quisquam eum provident
                             </p>
+                            <a class="btn btn-golden" href="#top-deals">Book Now</a>
                          </div>
                      </div>
                  </div>
@@ -80,13 +88,13 @@
                  <div class="top-deal col-12 col-sm-4 mb-3 ">
                     <div class="card border-0">
                         <img class="card-img-top img-fluid" src="src/images/service1.png" alt="" srcset="">
-                        <div class="card-img-overlay p-0 d-flex align-items-start flex-row-reverse">
-                            <div class="info-discount card-body bg-golden op-lg col-3 pr-0 pb-2">
+                        <div class="card-img-overlay p-0 d-flex flex-wrap flex-row-reverse">
+                            <div class="info-discount card-body bg-golden op-lg col-3  align-self-start pr-0 pb-2">
                                 <h4 class="text-light">
                                     <span class="discount">25</span>% OFF
                                 </h4>
                             </div>
-                            <div class="info card-body bg-golden op-lg col-12 align-self-end collapse">
+                            <div class="info card-body bg-golden op-lg col-12   align-self-end collapse">
                                 <strong class="text-clear">
                                     7 days | 12 Hrs | 20 min
                                 </strong>
@@ -115,21 +123,23 @@
         </div>
     </div>
 
-    <div class="bg-image bg-image-destination">
-        <div class="container">
-            <div class="row my-h-50 align-items-center justify-content-center text-center">
-                 <div class="col p-4">
-                     <div class="card border-0" style="opacity: 0.9;">
-                         <div class="card-body">
-                             <p class="lead">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat laboriosam pariatur distinctio aliquid. Ipsa ullam fugit, repellendus impedit nisi eum porro? Ipsa a dolor facilis tempore aspernatur molestiae assumenda autem.
-                             </p>
-                         </div>
-                     </div>
-                 </div>
+    <div class="bg-image bg-image-footer">
+            <div class="container p-4">
+                <div id="services" class="row my-h-50 align-items-center justify-content-center text-center">
+                    <div class="service col-12 col-sm mb-3 ">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm">
+                                <img class="img-fluid mb-4" src="src/images/icon-map.png" alt="" srcset="">
+                                <h3 class="my-text-primary">
+                                    140
+                                </h3> 
+                                <span class="text-light display-7">DESTINATIONS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
     <div class="">
         <div class="container my-4">
@@ -225,33 +235,23 @@
         </div>
     </div>
 
-    <div class="position-fixed" style="bottom:0; right:0">
-        <a href="" class="btn bg-golden rounded-0">Whatsapp</a>
+    <div class="whatsapp position-fixed rounded-left">
+        <a href="" class="btn btn-golden">Whatsapp</a>
     </div>
           
     
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/holderjs/holder.js"></script>
     <script src="src/js/main.js"></script>
     <script>
-        
-        $('.top-deal').hover(function () {
-                var td = $(this).find('.info-discount');
-                $(td).hide();
-
-                var ti = $(this).find('.info');
-                $(ti).show();
-            }, function () {
-                var td = $(this).find('.info-discount');
-                $(td).show();
-
-                var ti = $(this).find('.info');
-                $(ti).hide();
-            }
-        );
-        
+        $('a').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 700);
+            return false;
+        });
     </script>
   </body>
 </html>
