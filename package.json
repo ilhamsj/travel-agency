@@ -1,0 +1,28 @@
+{
+  "name": "isj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "holderjs": "^2.9.6",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "webpack-cli": "^3.3.9",
+    "bootstrap": "^4.3.1",
+    "webpack": "^4.41.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilhamsj/travel-agency.git"
+  },
+  "author": "ilhamsj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilhamsj/travel-agency/issues"
+  },
+  "homepage": "https://github.com/ilhamsj/travel-agency#readme"
+}
