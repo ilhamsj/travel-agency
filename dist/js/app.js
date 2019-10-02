@@ -95,16 +95,17 @@ $(document).ready(function () {
     data.forEach(function(item, index) {
         var x = $('.package').first().clone();
         $(x).find('h5').html(item.title);
-        $(x).find('img').attr('dist', item.image);
+        $(x).find('img').attr('src', item.image);
         $(x).appendTo('#packages');
+
     });
     
     service.forEach(function(item, index) {
         var x = $('#services').find('.service').first().clone()
-        $(x).find('img').attr('dist', item.image);
+        $(x).find('img').attr('src', item.image);
         $(x).find('h3').html(item.total)
         $(x).find('span').html(item.name)
-        $(x).appendTo('#services'); 
+        $(x).appendTo('#services');
     });
     
     topDeals.forEach(function(item, index) {
@@ -120,7 +121,6 @@ $(document).ready(function () {
             $(this).find('.info').slideToggle(); 
         });
     });
-});
 
     $('.top-deal').hover(function () {
         $(this).find('.info-discount').slideToggle();
@@ -130,3 +130,25 @@ $(document).ready(function () {
         $(this).find('.info').slideToggle();
         }
     );
+
+    // Click Animation
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 700);
+        return false;
+    });
+
+    // Count
+    $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 5000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
