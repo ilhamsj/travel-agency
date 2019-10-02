@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Travel Agency</title>
+    <title>Paket Wisata & Rental Mobil Terpercaya - Travel Agency</title>
     <link rel="icon" href="src/images/ic_launcher.png" type="image/x-icon">
 
     <!-- Required meta tags -->
@@ -130,7 +130,7 @@
                         <div class="row align-items-center">
                             <div class="col-12 col-sm">
                                 <img class="img-fluid mb-4" src="src/images/icon-map.png" alt="" srcset="">
-                                <h3 class="my-text-primary">
+                                <h3 class="count my-text-primary">
                                     140
                                 </h3> 
                                 <span class="text-light display-7">DESTINATIONS</span>
@@ -246,11 +246,26 @@
     <script src="node_modules/holderjs/holder.js"></script>
     <script src="src/js/main.js"></script>
     <script>
+
+        // Click Animation
         $('a').click(function(){
             $('html, body').animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 700);
             return false;
+        });
+
+        // Count
+        $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 5000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
         });
     </script>
   </body>
