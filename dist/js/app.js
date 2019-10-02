@@ -31,23 +31,23 @@ $(document).ready(function () {
     var data = [
         {
             title: 'lorem piek nama',
-            image: 'src/images/d2.png',
+            image: 'dist/images/d2.png',
         },
         {
             title: 'lorem piek',
-            image: 'src/images/d3.png',
+            image: 'dist/images/d3.png',
         },
         {
             title: 'lorem piek',
-            image: 'src/images/d4.png',
+            image: 'dist/images/d4.png',
         },
         {
             title: 'lorem piek',
-            image: 'src/images/d5.png',
+            image: 'dist/images/d5.png',
         },
         {
             title: 'lorem piek',
-            image: 'src/images/d6.png',
+            image: 'dist/images/d6.png',
         },
     ];
 
@@ -75,14 +75,14 @@ $(document).ready(function () {
     ];
 
     var service = [
-        {name: 'TOUR PACK', total: 100, image: 'src/images/icon-box.png'},
-        {name: 'HAPPY CLIENTS', total: 250, image: 'src/images/icon-smile.png'},
-        {name: 'HOURS SUPPORT', total: 24, image: 'src/images/icon-phone.png'},
+        {name: 'TOUR PACK', total: 100, image: 'dist/images/icon-box.png'},
+        {name: 'HAPPY CLIENTS', total: 250, image: 'dist/images/icon-smile.png'},
+        {name: 'HOURS SUPPORT', total: 24, image: 'dist/images/icon-phone.png'},
     ];
 
     var topDeals = [
-        {name: 'LOREM IPSUM IS SIMPLY', price: 299, discount: 39, image: 'src/images/items-to-discover-things.jpg'},
-        {name: 'LOREM IPSUM IS HARD', price: 399, discount: 45, image: 'src/images/icon-box.png'},
+        {name: 'LOREM IPSUM IS SIMPLY', price: 299, discount: 39, image: 'dist/images/items-to-discover-things.jpg'},
+        {name: 'LOREM IPSUM IS HARD', price: 399, discount: 45, image: 'dist/images/icon-box.png'},
     ];
 
     
@@ -95,13 +95,13 @@ $(document).ready(function () {
     data.forEach(function(item, index) {
         var x = $('.package').first().clone();
         $(x).find('h5').html(item.title);
-        $(x).find('img').attr('src', item.image);
+        $(x).find('img').attr('dist', item.image);
         $(x).appendTo('#packages');
     });
     
     service.forEach(function(item, index) {
         var x = $('#services').find('.service').first().clone()
-        $(x).find('img').attr('src', item.image);
+        $(x).find('img').attr('dist', item.image);
         $(x).find('h3').html(item.total)
         $(x).find('span').html(item.name)
         $(x).appendTo('#services'); 
