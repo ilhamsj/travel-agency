@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="dist/css/poppins-700.css">
     <link rel="stylesheet" href="dist/css/poppins.css">
     <link rel="stylesheet" href="dist/css/master.css">
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
     <style>
         .whatsapp {
             transform: rotate(-90deg);
@@ -44,7 +45,7 @@
         </div>
     </nav>
 
-    <div id="banner" class="bg-image bg-image-girl">
+    <section id="banner" class="bg-image bg-image-girl">
         <div class="container">
             <div class="row my-h-100 align-items-center justify-content-center text-center">
                  <div class="col">
@@ -64,9 +65,9 @@
                  </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div>
+    <section>
         <div class="container">
             <div id="top-deals" class="row my-h-100 align-items-center justify-content-center">
                  <div class="col-12 col-sm-10  text-center">
@@ -112,7 +113,7 @@
                                 <strong class="my-text-primary">$<span class="price">199</span></strong>
                             </div>
                             <div class="col text-right">
-                                <a href="" class="btn bg-golden  text-clear">
+                                <a href="#order" class="btn bg-golden  text-clear">
                                     <strong>Book Now</strong>
                                 </a>
                             </div>
@@ -121,9 +122,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="bg-dark-sm">
+    <section id="order" class="bg-dark-sm">
         <div class="container">
             <div class="row my-h-100 align-items-center justify-content-center">
                 <div class="col-12 col-sm">
@@ -137,19 +138,35 @@
                                    <p>
                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et minus ullam recusandae 
                                    </p>
+                                   <a href="#list" class="btn bg-golden  text-clear">
+                                        <strong>Explore Destination</strong>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-5">
-                            <img class="img-fluid" src="dist/images/map.png" alt="" srcset="">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper text-center">
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="dist/images/map.png" alt="" srcset="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="dist/images/map.png" alt="" srcset="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="dist/images/map.png" alt="" srcset="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="">
+    <section id="list" class="">
         <div class="container my-4">
             <div id="packages" class="row align-items-center justify-content-center">
                  <div class="col-12 col-sm-10 text-center">
@@ -179,7 +196,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="bg-image bg-image-footer">
         <div class="container p-4">
@@ -199,7 +216,7 @@
         </div>
     </div>
 
-    <div class="bg-clear">
+    <footer class="bg-clear">
         <div class="container">
             <div class="row p-4 justify-content-center">
                  <div class="col mb-4">
@@ -243,17 +260,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="whatsapp position-fixed rounded-left">
+    <section class="whatsapp position-fixed rounded-left">
         <a href="" class="btn btn-golden">Whatsapp</a>
-    </div>
+    </section>
           
-    
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/popper.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/holder.js"></script>
     <script src="dist/js/app.js"></script>
+    <script src="node_modules/swiper/js/swiper.min.js"></script>    
+    <script src="dist/js/swiper.js"></script>
+
   </body>
 </html>
