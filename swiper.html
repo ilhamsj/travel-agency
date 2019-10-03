@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/poppins-700.css">
+    <link rel="stylesheet" href="dist/css/poppins.css">
+    <link rel="stylesheet" href="dist/css/master.css">
+</head>
+<body>
+
+    <!-- Swiper -->
+    <div class="bg-dark">
+        <div class="container">
+            <div class="row my-h-100 justify-content-center align-items-center">
+                <div class="col-10">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row text-light justify-content-center align-items-center">
+                                    <div class="col-3">
+                                        <img class="img-fluid rounded-circle" data-src="holder.js/600x600?auto=yes&random=yes&textmode=exact" alt="" srcset="">
+                                    </div>
+                                    <div class="col">
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                            <footer class="blockquote-footer">
+                                                <a href="">Someone famous in </a>
+                                                <cite title="Source Title">Source Title</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-3">
+                                        <img class="img-fluid rounded-circle" data-src="holder.js/600x600?auto=yes&random=yes&textmode=exact" alt="" srcset="">
+                                    </div>
+                                    <div class="col bg-light">
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-3">
+                                        <img class="img-fluid rounded-circle" data-src="holder.js/600x600?auto=yes&random=yes&textmode=exact" alt="" srcset="">
+                                    </div>
+                                    <div class="col bg-light">
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><img data-src="holder.js/1000x200?auto=yes&random=yes&textmode=exact" alt="" srcset=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/holder.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="dist/js/app.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidePerView: 1,
+            spaceBetween: 200,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true
+        });
+    </script>
+</body>
+</html>
