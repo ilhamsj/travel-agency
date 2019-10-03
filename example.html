@@ -1,0 +1,161 @@
+<div id="output">Hello World</div>
+<script>
+$('#output').click(function(){
+  $.ajax({
+    dataType:"json",
+    url:'https://jsonplaceholder.typicode.com/posts/1',
+    success:success
+  })
+  .done(function(){console.log('DONE')})
+})
+function success(data,status,xhr){
+  console.log(data)
+  console.log(status)
+  console.log(xhr)
+  $('#output').html(data.title)
+}
+</script>
+
+
+/////////////////////////////////////////////////////////////
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Learn AJAX</title>
+</head>
+<body>
+    <h1>Learn AJAX jQuery</h1>
+    <div id="output"></div>
+    <button id="clickMe">Click Here</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#clickMe').click(webData);
+        function webData() {
+            var url = 'https://api.spacexdata.com/v2/launches/'
+            $.get(url,output)
+        }
+        function output(data) {
+            console.log(data[1])
+            $('#output').html('<h2>' + data[1].flight_number + '</h2><p>' + data[1].details + '</p>')
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+//////////////////////////////// JSON //////////////////////////////////////
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Learn AJAX</title>
+</head>
+<body>
+    <h1>Learn AJAX jQuery</h1>
+    <div id="output"></div>
+    <button id="clickMe">Click Here</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#clickMe').click(webData);
+        function webData() {
+            var url = 'https://api.spacexdata.com/v2/launches/'
+            $.getJSON(url,output)
+        }
+        function output(data) {
+            console.log(data)
+            var html ='';
+            $.each(data, function(k,v){
+                html += '<h3>Flight Number '+v.flight_number+'</h3>';
+                html += 'Details '+v.details+'<br>'
+            })
+            
+            $('#output').html(html)
+        }
+    </script>
+</body>
+</html>
+
+
+
+/////// POST ///////
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Learn AJAX</title>
+</head>
+<body>
+    <h1>Learn AJAX jQuery</h1>
+    <div id="output"></div>
+    <form id="myForm"> First Name :
+        <input type="text" name="first" value="Laurence">
+        <br> Last Name:
+        <input type="text" name="last" value="Svekis">
+        <input type="submit" value="submit data"> </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#myForm').submit(function (e) {
+            e.preventDefault();
+            var myData = {
+                firstName:  $('input[name="first"]').val()
+                , lastName: $('input[name="last"]').val()
+            }
+            console.log(myData)
+            var url = 'http://s179017901.onlinehome.us/discoveryvip/';
+            $.post(url, myData).done(function (data) {
+                console.log(data);
+            })
+            
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+///////////// POST LONG FORM //////////////////
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Learn AJAX</title>
+</head>
+<body>
+    <h1>Learn AJAX jQuery</h1>
+    <div id="output"></div>
+    <form id="myForm"> First Name :
+        <input type="text" name="first" value="Laurence">
+        <br> Last Name:
+        <input type="text" name="last" value="Svekis">
+        <input type="submit" value="submit data"> </form>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        $('#myForm').submit(function (e) {
+            e.preventDefault();
+            var myData = {
+                firstName:  $('input[name="first"]').val()
+                , lastName: $('input[name="last"]').val()
+            }
+            var url = 'http://s179017901.onlinehome.us/discoveryvip/';
+            
+            $.ajax({
+                url:url,
+                type:"post",
+                data:myData,
+                success:function(data){
+                    console.log(data)
+                }
+            })
+            
+            
+            
+        })
+    </script>
+</body>
+</html>
