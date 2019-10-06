@@ -75,14 +75,16 @@ $(document).ready(function () {
     ];
 
     var service = [
-        {name: 'TOUR PACK', total: 100, image: 'dist/images/icon-box.png'},
-        {name: 'HAPPY CLIENTS', total: 250, image: 'dist/images/icon-smile.png'},
-        {name: 'HOURS SUPPORT', total: 24, image: 'dist/images/icon-phone.png'},
+        {name: 'DESTINATIONS', total: 399, image: 'dist/images/icon-map.png'},
+        {name: 'TOUR PACK', total: 149, image: 'dist/images/icon-box.png'},
+        {name: 'HAPPY CLIENTS', total: 2500, image: 'dist/images/icon-smile.png'},
+        {name: 'HOURS SUPPORT', total: 5600, image: 'dist/images/icon-phone.png'},
     ];
 
     var topDeals = [
-        {name: 'LOREM IPSUM IS SIMPLY', price: 299, discount: 39, image: 'dist/images/items-to-discover-things.jpg'},
-        {name: 'LOREM IPSUM IS HARD', price: 399, discount: 45, image: 'dist/images/icon-box.png'},
+        {name: 'LOREM IPSUM IS ABC', price: 299, discount: 39, image: 'dist/images/items-to-discover-things.jpg'},
+        {name: 'LOREM IPSUM IS DEF', price: 399, discount: 45, image: 'dist/images/icon-box.png'},
+        {name: 'LOREM IPSUM IS DEF', price: 399, discount: 45, image: 'dist/images/icon-box.png'},
     ];
 
     
@@ -100,14 +102,6 @@ $(document).ready(function () {
 
     });
     
-    service.forEach(function(item, index) {
-        var x = $('#services').find('.service').first().clone()
-        $(x).find('img').attr('src', item.image);
-        $(x).find('h3').html(item.total)
-        $(x).find('span').html(item.name)
-        $(x).appendTo('#services');
-    });
-    
     topDeals.forEach(function(item, index) {
         var x = $('.top-deal').first().clone();
         $(x).find('.price').html(item.price);
@@ -121,15 +115,22 @@ $(document).ready(function () {
             $(this).find('.info').slideToggle(); 
         });
     });
+    $('.top-deal').first().remove();
 
-    $('.top-deal').hover(function () {
-        $(this).find('.info-discount').slideToggle();
-        $(this).find('.info').slideToggle();
-    }, function () {
-        $(this).find('.info-discount').slideToggle();
-        $(this).find('.info').slideToggle();
-        }
-    );
+    
+    service.forEach(function(item, index) {
+        var x = $('#services').find('.service').first().clone()
+        $(x).find('img').attr('src', item.image);
+        $(x).find('h3').html(item.total)
+        $(x).find('span').html(item.name)
+        $(x).appendTo('#services');
+    });
+    $('.service').first().remove();
+
+    service.forEach(function(item, index) {
+        var x = $('.swiper-wrapper').find('.swiper-slide').first().clone()
+        $(x).appendTo('.swiper-wrapper');
+    });
 
     // Click Animation
     $('a').click(function(){
@@ -138,17 +139,5 @@ $(document).ready(function () {
         }, 700);
         return false;
     });
-
-    // Count
-    $('.count').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 5000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
 });
+
