@@ -1,5 +1,3 @@
-// require('bootstrap');
-
 $(document).ready(function () {
     $(window).scroll(function () { 
         if ($(document).scrollTop() > 50) {
@@ -31,23 +29,27 @@ $(document).ready(function () {
     var data = [
         {
             title: 'lorem piek nama',
-            image: 'dist/images/d2.png',
+            image: 'https://source.unsplash.com/200x280/?nature,water',
         },
         {
             title: 'lorem piek',
-            image: 'dist/images/d3.png',
+            image: 'https://source.unsplash.com/200x280/?nature,water',
         },
         {
             title: 'lorem piek',
-            image: 'dist/images/d4.png',
+            image: 'https://source.unsplash.com/200x280/?nature,water',
         },
         {
             title: 'lorem piek',
-            image: 'dist/images/d5.png',
+            image: 'https://source.unsplash.com/200x280/?nature,water',
         },
         {
             title: 'lorem piek',
-            image: 'dist/images/d6.png',
+            image: 'https://source.unsplash.com/200x280/?nature,water',
+        },
+        {
+            title: 'lorem piek',
+            image: 'https://source.unsplash.com/200x280/?nature,water',
         },
     ];
 
@@ -98,9 +100,15 @@ $(document).ready(function () {
         var x = $('.package').first().clone();
         $(x).find('h5').html(item.title);
         $(x).find('img').attr('src', item.image);
-        $(x).appendTo('#packages');
-
+        $(x).appendTo('#packages').hover(function () {
+            $(this).find('.card-body').slideToggle();    
+        }, function () {
+            $(this).find('.card-body').slideToggle();    
+                // out
+            }
+        );;
     });
+    $('.package').first().remove();
     
     topDeals.forEach(function(item, index) {
         var x = $('.top-deal').first().clone();
@@ -133,11 +141,11 @@ $(document).ready(function () {
     });
 
     // Click Animation
-    $('a').click(function(){
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 700);
-        return false;
-    });
+    // $('a').click(function(){
+    //     $('html, body').animate({
+    //         scrollTop: $( $.attr(this, 'href') ).offset().top
+    //     }, 700);
+    //     return false;
+    // });
 });
 

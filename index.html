@@ -59,7 +59,7 @@
                             <p class="lead text-light my-4">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et minus ullam recusandae velit deserunt non necessitatibus natus, magni nam quisquam eum provident
                             </p>
-                            <a class="btn btn-golden" href="#top-deals">Book Now</a>
+                            <a class="btn btn-golden" href="#top-deals"  data-toggle="modal" data-target="#modelId">Book Now</a>
                          </div>
                      </div>
                  </div>
@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="p-4">
         <div class="container">
             <div id="top-deals" class="row my-h-100 align-items-center justify-content-center">
                  <div class="col-12 col-sm-10  text-center">
@@ -88,7 +88,7 @@
                  </div>
                  <div class="top-deal col-12 col-sm-4 mb-3 ">
                     <div class="card border-0">
-                        <img class="card-img-top img-fluid" src="dist/images/service1.png" alt="" srcset="">
+                        <img class="card-img-top img-fluid" src="https://source.unsplash.com/600x450/?mountain" alt="" srcset="">
                         <div class="card-img-overlay p-0 d-flex flex-wrap flex-row-reverse">
                             <div class="info-discount card-body bg-golden op-lg col-3  align-self-start pr-0 pb-2">
                                 <h4 class="text-light">
@@ -113,12 +113,17 @@
                                 <strong class="my-text-primary">$<span class="price">199</span></strong>
                             </div>
                             <div class="col text-right">
-                                <a href="#order" class="btn bg-golden  text-clear">
+                                <a href="#order" class="btn bg-golden text-clear btn-order" data-toggle="modal" data-target="#modelId">
                                     <strong>Book Now</strong>
                                 </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-right text-muted">
+                    <a href="" class="btn btn-primary btn-sm m-0 p-1 shadow-sm">Load more packages </a>
                 </div>
             </div>
         </div>
@@ -142,7 +147,7 @@
         </div>
     </section>
 
-    <section id="list" class="">
+    <section id="list" class="p-4">
         <div class="container my-4">
             <div id="packages" class="row align-items-center justify-content-center">
                  <div class="col-12 col-sm-10 text-center">
@@ -158,17 +163,22 @@
                          </div>
                      </div>
                  </div>
-                <div class="col-12 col-sm-4 px-2 mb-3 package ">
+                <div class="col-12 col-sm-3 px-2 mb-3 package ">
                     <div class="card border-0">
-                        <img class="card-img-top img-fluid" src="dist/images/d1.png" alt="" srcset="">
+                        <img class="card-img-top img-fluid rounded" src="dist/images/d1.png" alt="" srcset="">
                         <div class="card-img-overlay p-0 d-flex flex-row-reverse align-items-end">
-                            <div class="card-body rounded-bottom bg-golden op-lg">
+                            <div class="card-body rounded-bottom bg-golden op-lg collapse">
                                 <a href="" class="text-clear">
                                     <strong>Lorem ipsum dolor sit</strong>
                                 </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-right text-muted">
+                    <a href="" class="btn btn-primary btn-sm m-0 p-1 shadow-sm">Load more packages </a>
                 </div>
             </div>
         </div>
@@ -184,7 +194,7 @@
                             <div class="swiper-slide">
                                 <div class="row my-h-50 justify-content-center align-items-center">
                                     <div class="col-12 col-sm-10 text-center">
-                                        <img class="img-fluid rounded-circle mb-3" data-src="holder.js/150x150?auto=yes&random=yes&textmode=exact" alt="" srcset="">
+                                        <img class="img-fluid rounded-circle mb-3" src="https://source.unsplash.com/100x100/?face" alt="" srcset="">
                                         <h4>Mia Kun</h4>
                                         <p>
                                             Consectetur adipisicing elit. Quod optio natus saepe et quaerat repellat at, laborum excepturi dignissimos minima eos explicabo esse rem voluptates iusto deserunt! Assumenda, fugiat maiores.
@@ -217,7 +227,7 @@
                      <h5>GALLERY</h5>
                      <div id="galleries" class="row">
                          <div class="gallery px-2 col-4 col-sm-4 mb-3">
-                             <img class="img-fluid rounded" data-src="holder.js/500x500?auto=yes&random=yes&textmode=exact"  alt="">
+                             <img class="img-fluid rounded" src="https://source.unsplash.com/500x500/?smile"  alt="">
                          </div>
                      </div>
                  </div>
@@ -249,6 +259,40 @@
     <section class="whatsapp position-fixed rounded-left">
         <a href="" class="btn btn-golden">Whatsapp</a>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/ilhamsaputrajati@gmail.com" method="POST" id="order-form">
+                        <div class="form-group">
+                          <label for="">Name</label>
+                          <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Email</label>
+                          <input type="email" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Phone Number</label>
+                          <input type="number" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btn-submit">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
           
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/popper.min.js"></script>
@@ -257,5 +301,12 @@
     <script src="dist/js/app.js"></script>
     <script src="dist/js/swiper.min.js"></script>
     <script src="dist/js/swiper.js"></script>
+    <script>
+        $('#btn-submit').click(function (e) { 
+            e.preventDefault();
+            $('#order-form').submit();
+        });
+        
+    </script>
   </body>
 </html>
